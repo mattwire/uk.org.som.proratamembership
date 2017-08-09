@@ -171,11 +171,11 @@ function proratamembership_civicrm_navigationMenu(&$menu) {
 } */
 
 
-function proratamembership_civicrm_buildAmount(
-    $pageType,
-    &$form,
-    &$amount
-) {
+function proratamembership_civicrm_buildAmount($pageType, &$form, &$amount) {
+  if (!empty($form->get('mid'))) {
+    // Don't apply pro-rated fees to renewals
+    return;
+  }
     //sample to modify priceset fee
     $priceSetId = $form->get( 'priceSetId' );
     if ( !empty( $priceSetId ) ) {
