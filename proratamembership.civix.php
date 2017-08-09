@@ -175,7 +175,7 @@ function _proratamembership_civix_civicrm_managed(&$entities) {
     $es = include $file;
     foreach ($es as $e) {
       if (empty($e['module'])) {
-        $e['module'] = 'uk.co.circleinteractive.module.proratamembership';
+        $e['module'] = 'uk.org.som.proratamembership';
       }
       $entities[] = $e;
     }
@@ -204,7 +204,7 @@ function _proratamembership_civix_civicrm_caseTypes(&$caseTypes) {
       // throw new CRM_Core_Exception($errorMessage);
     }
     $caseTypes[$name] = array(
-      'module' => 'uk.co.circleinteractive.module.proratamembership',
+      'module' => 'uk.org.som.proratamembership',
       'name' => $name,
       'file' => $file,
     );
@@ -230,7 +230,7 @@ function _proratamembership_civix_civicrm_angularModules(&$angularModules) {
     $name = preg_replace(':\.ang\.php$:', '', basename($file));
     $module = include $file;
     if (empty($module['ext'])) {
-      $module['ext'] = 'uk.co.circleinteractive.module.proratamembership';
+      $module['ext'] = 'uk.org.som.proratamembership';
     }
     $angularModules[$name] = $module;
   }
