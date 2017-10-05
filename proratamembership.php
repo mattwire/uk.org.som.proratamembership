@@ -217,6 +217,8 @@ function proratamembership_civicrm_buildAmount($pageType, &$form, &$amount) {
                     }
                 }
             }
+            // FIXME: Somewhere between 4.7.15 and 4.7.23 the above stopped working and we have to do the following to make the confirm page show the correct amount.
+            $form->_priceSet['fields'] = $feeBlock;
         }
     }
 }

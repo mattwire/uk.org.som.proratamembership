@@ -12,8 +12,8 @@
     <url desc="Support">http://civicrm.stackexchange.com</url>
     <url desc="Licensing">http://civicrm.org/licensing</url>
   </urls>
-  <releaseDate>2017-08-09</releaseDate>
-  <version>1.1</version>
+  <releaseDate>2017-10-05</releaseDate>
+  <version>1.2</version>
   <compatibility>
     <ver>4.7</ver>
   </compatibility>
